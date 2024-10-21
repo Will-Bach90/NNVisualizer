@@ -1,0 +1,14 @@
+.form-container {
+    margin: 20px;
+  }
+  
+  .form-container div {
+    margin-bottom: 10px;
+  }
+  
+  .result-container {
+    margin-top: 20px;
+    font-weight: bold;
+    color: green;
+  }
+  
