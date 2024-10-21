@@ -29,5 +29,5 @@ neural network with real-time progress updates and loss visualization.
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/your-username/neural-network-trainer.git
+   git clone https://github.com/will-bach90/neural-network-trainer.git
    cd neural-network-trainer
