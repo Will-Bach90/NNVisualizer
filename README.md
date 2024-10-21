@@ -55,18 +55,8 @@ You can define your neural network by specifying:
 - Hidden layers: You can dynamically add or remove hidden layers, specifying the number of neurons in each layer.
 - Output size: The number of output neurons (e.g., 1 for binary classification).
 
-### 2. Upload Custom Dataset (CSV)
-- You can upload a CSV file that contains your dataset. The app assumes the last column of the CSV file is the target (output), and all other columns are input features.
-- Example of CSV format:
-  ```csv
-  feature1,feature2,feature3,target
-  0.1,0.5,0.3,1
-  0.2,0.4,0.6,0
-  0.3,0.8,0.2,1
-  ```
-
-### 3. Train the Neural Network
-Once you've defined your neural network and uploaded a dataset:
+### 2. Train the Neural Network
+Once you've defined your neural network:
 - Click **Train** to begin training the neural network.
 - A real-time progress bar will show the current epoch.
 - The loss will be visualized dynamically using a line chart.
@@ -121,6 +111,7 @@ To make changes to the project, you can run the frontend and backend separately 
    Visit `http://localhost:3000` to access the frontend.
 
 ## Future Enhancements
+- Allow users to upload their own files.
 - Add more activation functions (ReLU, Tanh).
 - Implement additional optimizers (SGD, Adam).
 - Include a confusion matrix or other advanced metrics for classification tasks.
