@@ -30,9 +30,11 @@ def train():
     nn = NeuralNetwork(input_size, hidden_layers, output_size)
 
     # Train with progress updates
-    nn.train(X, y, epochs=epochs)
+    losses = nn.train(X, y, epochs=epochs)
 
-    return jsonify({'status': 'Training complete!'})
+    return jsonify({'losses': losses})
+
+    # return jsonify({'status': 'Training complete!'})
 
 @app.route('/upload', methods=['POST'])
 def upload_file():

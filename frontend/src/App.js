@@ -28,20 +28,34 @@ function App() {
     };
   }, []);
 
-  const handleFormSubmit = async (submittedFormData) => {
-    setFormData(submittedFormData);  // Save form data
-    setIsTraining(true);
+  // const handleFormSubmit = async (submittedFormData) => {
+  //   setFormData(submittedFormData);  // Save form data
+  //   setIsTraining(true);
     
+  //   const response = await fetch("http://localhost:5000/train", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({ ...submittedFormData, fileData: uploadedFile }),  // Send the fileData along with formData
+  //   });
+  //   const data = await response.json();
+  //   setIsTraining(false);
+  //   console.log(data.status);
+  // };
+  const handleFormSubmit = async (submittedFormData) => {
+    setIsTraining(true);
     const response = await fetch("http://localhost:5000/train", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ ...submittedFormData, fileData: uploadedFile }),  // Send the fileData along with formData
+      body: JSON.stringify(submittedFormData),
     });
+    
     const data = await response.json();
     setIsTraining(false);
-    console.log(data.status);
+    setLosses(data.losses);  // Ensure this line correctly updates the losses state
   };
 
   const handleFileUpload = async (fileData) => {
