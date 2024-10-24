@@ -30,7 +30,7 @@ def train():
     nn = NeuralNetwork(input_size, hidden_layers, output_size)
 
     # Train with progress updates
-    losses = nn.train(X, y, epochs=epochs)
+    losses = nn.train(X, y, 1000)
 
     return jsonify({'losses': losses})
 
